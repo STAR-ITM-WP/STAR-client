@@ -36,7 +36,7 @@ const SignupPage = () => {
   const handleSignup = async () => {
     try {
       await axios.post('https://star-isih.onrender.com/api/users/register', form);
-      alert('회원가입 성공!');
+      alert('회원가입 성공!') ;
       window.location.href = '/login';
     } catch (err) {
       if (!err.response) {
