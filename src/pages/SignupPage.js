@@ -37,7 +37,7 @@ const SignupPage = () => {
     try {
       await axios.post('https://star-isih.onrender.com/api/users/register', form);
       alert('회원가입 성공!') ;
-      window.location.href = '/login';
+      window.location.href = '/login' ;
     } catch (err) {
       if (!err.response) {
         console.warn('⚠️ 서버 연결 실패. 로컬에 mock 회원 저장.');
