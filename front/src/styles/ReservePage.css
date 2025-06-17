@@ -1,0 +1,156 @@
+.reserve-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 890px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.search-bar {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+  max-width: 800px;
+
+}
+
+.search-bar input {
+  width: 100%;        
+  padding: 14px ;  
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box; 
+}
+.building-list{
+  width: 80%;
+}
+
+.building-card {
+  background-color: #fffefe;
+  border-radius: 16px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
+  padding: 25px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.building-img {
+  width: 110px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 24px;
+}
+
+.building-info {
+  flex-grow: 1;
+  margin-left: 24px;
+  min-width: 180px;
+}
+
+.building-number {
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.building-name {
+  font-size: 24px;
+  font-family: "IBM Plex Mono", monospace;
+  margin-bottom: 10px;
+}
+
+.available-cunot {
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.green-dot {
+  width: 8px;
+  height: 8px;
+  background-color: rgb(123, 234, 123);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.reserve-btn {
+  background-color: #1E1759;
+  color: white;
+  border: none;
+  padding: 12px 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s ease;
+}
+
+.reserve-btn:hover {
+  background-color: #3a3a3a;
+}
+
+.star-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-left: 16px;
+}
+
+
+/*모바일*/
+@media (max-width: 600px) {
+  .reserve-content {
+    padding: 24px 12px;
+  }
+
+  .building-card {
+    align-items: flex-start;
+    padding: 24px;
+  }
+
+  .building-img {
+    width: 80px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+  }
+
+  .building-info {
+    margin-left: 0;
+  }
+
+  .building-number {
+    font-size: 18px;
+  }
+
+  .building-name {
+    font-size: 20px;
+  }
+
+  .available-cunot{
+    font-size: 13px;
+  }
+
+  .reserve-btn {
+    width: 55%;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-left: auto; 
+  }
+
+  .star-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+    margin-top: 10px;
+  }
+  
+}

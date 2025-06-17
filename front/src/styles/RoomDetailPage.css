@@ -1,0 +1,176 @@
+.room-detail-content {
+  padding: 24px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.legend {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+.gray { background-color: #d3d3d3; }
+.green { background-color: #d9fdd3; }
+.dark-green { background-color: #32cd32; }
+
+.calendar-wrapper {
+  width: 100%;
+  overflow-x: auto;           
+  display: flex;
+  justify-content: center;    
+  box-sizing: border-box;
+  padding: 0 16px;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  width: 1500px;
+}
+
+.grid-header, .grid-row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.cell {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+  min-width: 100px;
+  box-sizing: border-box;
+  min-width: 100px;
+}
+
+.cell.header {
+  background-color: #ffffff;
+  font-weight: bold;
+  position: relative;
+  z-index: 0; /* 모달보다 아래로 떨어뜨림 */
+}
+
+.time-label {
+  width: 140px;
+  font-weight: bold;
+  background-color: #f9f9f9;
+}
+
+.available {
+  background-color: #d9fdd3;
+  cursor: pointer;
+}
+
+.unavailable {
+  background-color: #e0e0e0;
+  color: #888;
+}
+
+.selected {
+  background-color: #32cd32;
+  color: white;
+  font-weight: bold;
+}
+
+.calendar-actions {
+  margin-top: 16px;
+  text-align: right;
+  padding-right: 12px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.modal-box {
+  background: white;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  max-width: 100%;
+  width: 450px;
+}
+
+.modal-box button{
+  padding: 10px 18px;
+  border: none;
+  background: #1E1759;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+/* 모바일 반응형 */
+@media (max-width: 600px) {
+  .room-detail-content {
+    padding: 16px;
+  }
+
+  .calendar-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .grid {
+    margin: 16px;
+    overflow-x: auto;
+  }
+
+  .grid-header, .grid-row {
+    flex-wrap: nowrap;
+    width: max-content;
+  }
+
+  .cell, .time-label {
+    width: 60px;
+    min-width: 60px;
+    font-size: 10px;
+    padding: 4px;
+  }
+
+  .calendar-actions {
+    text-align: center;
+    padding-right: 0;
+  }
+  
+  .modal-box {
+    max-width: 95%;
+    padding: 20px;
+  }
+
+  .modal-box button {
+    width: 55%;
+    font-size: 12.5px;
+  }
+}

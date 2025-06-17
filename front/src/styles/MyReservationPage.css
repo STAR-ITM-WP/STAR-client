@@ -1,0 +1,133 @@
+.my-reservation-content {
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.my-reservation-content h2 {
+  margin-bottom: 48px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #000;
+  width: 100%;
+  max-width: 900px;
+  text-align: left;
+}
+
+.reservation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.reservation-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fffefe;
+  border-radius: 12px;
+  border: 1px solid #d2d2d2;
+  padding: 30px; /* 기존보다 여유 있게 */
+  box-shadow: 0 0 5px rgba(170, 170, 170, 0.3);
+  width: 100%;
+  max-width: 900px;
+  flex-wrap: wrap;
+}
+
+.reservation-img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 24px;
+}
+
+.reservation-info {
+  flex-grow: 1;
+  margin-left: 24px;
+  min-width: 180px;
+}
+
+.reservation-building-number {
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #000;
+  font-family: Inter;
+}
+
+.reservation-building {
+  font-size: 28px;
+  font-family: 'Jaro', sans-serif;
+  margin-bottom: 10px;
+  color: #000768;
+  text-shadow: 2px 3px 3px rgba(1, 0, 65, 0.199);
+}
+
+.reservation-detail {
+  font-size: 15px;
+  font-family: Inter;
+  color: #555;
+}
+
+.cancel-button {
+  background-color: #1E1759;
+  color: white;
+  border: none;
+  padding: 12px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s ease;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.cancel-button:hover {
+  background-color: #3a3a3a;
+}
+
+/* 모바일*/
+@media (max-width: 600px) {
+  .reservation-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .reservation-img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 16px;
+  }
+
+  .reservation-info {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .reservation-building-number {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .reservation-building {
+    font-size: 22px;
+  }
+
+  .reservation-detail {
+    font-size: 14px;
+  }
+
+  .cancel-button {
+    width: 100%;
+    height: 44px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,122 @@
+/* styles/HotspotCard.css */
+.hotspot-card {
+    background: white;
+    text-align: center;
+    flex: 1;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .hotspot-card:hover {
+    transform: scale(1.03);
+    z-index: 3;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hotspot-card.first {
+    border-radius: 20px;
+    border: 0.5px solid #ffe969be;
+    background: linear-gradient(180deg, #FDFDFD 0%, #FFFEFA 100%);  
+    box-shadow: 0px 5px 30px 5px rgba(255, 232, 138, 0.25);
+    z-index: 2;
+    width: 309px;
+    height: 490px;
+  
+  
+  }
+  
+  .hotspot-card.second {
+    border-radius: 20px;
+    border: 0.5px solid #ffb1b192;
+    background: #FDFDFD;
+    box-shadow: 0px 5px 30px 5px rgba(255, 123, 119, 0.25);
+    z-index: 1;
+    width: 309px;
+    height: 460px;
+  }
+  
+  .hotspot-card.third {
+    border-radius: 20px;
+    border: 0.5px solid #74ffbc80;
+    background: #FDFDFD;
+    box-shadow: 0px 5px 30px 5px rgba(119, 255, 185, 0.25);
+    z-index: 1;
+    width: 309px;
+    height: 430px;
+
+  }
+  
+  .rank {
+    color: #000;
+    font-family: Jomhuria;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .building-name {
+    color: #1D0060;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Jaro;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  img {
+    width: 207px;
+    height: 202px;
+  }
+  button{
+    border-radius: 10px;
+    border: 0.5px solid #656565;
+    background: #1E1759;
+    color: #FDFDFD;
+    width: 186.906px;
+    height: 41px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 600px) {
+    .hotspot-card {
+      width: 250px;
+      height: auto;
+      padding: 16px 12px;
+      margin: 0 4px;
+      flex: 0 0 auto; /* 가로 스크롤용 카드 고정 너비 */
+    }
+    
+    .hotspot-card.first,
+    .hotspot-card.second,
+    .hotspot-card.third {
+      width: 70%;
+      max-width: 320px;
+      height: auto;
+      padding: 18px 16px;
+    }
+    .rank {
+      font-size: 42px;
+    }
+  
+    .building-name {
+      font-size: 22px;
+    }
+  
+    .hotspot-card img {
+      width: 90%;
+      height: auto;
+      margin: 8px 0;
+    }
+  
+    .hotspot-card button {
+      font-size: 13px;
+      width: 80%;
+      height: 36px;
+      margin: 6px auto;
+    }
+  }
+  
