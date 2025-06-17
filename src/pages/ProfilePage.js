@@ -58,7 +58,7 @@ const ProfilePage = () => {
         const token = localStorage.getItem('token');
         if (!token) throw new Error('No token');
 
-        const res = await axios.get('http://localhost:8080/api/users/me', {
+        const res = await axios.get('https://star-isih.onrender.com/api/users/me', {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -66,7 +66,7 @@ const ProfilePage = () => {
         setUser(userData);
 
         // ✅ 서버에서 전체 건물 목록 받아오기
-        const buildingsRes = await axios.get('http://localhost:8080/api/buildings');
+        const buildingsRes = await axios.get('https://star-isih.onrender.com/api/buildings');
         const buildingData = buildingsRes.data.buildings;
 
         // ✅ building.name과 userData.favorites를 비교해 매칭
@@ -74,7 +74,7 @@ const ProfilePage = () => {
           buildingData
             .filter(b => userData.favorites.includes(b.buildingName))
             .map(async (b) => {
-              const roomRes = await axios.get(`http://localhost:8080/api/buildings/rooms?buildingNo=${b.buildingNo}`);
+              const roomRes = await axios.get(`https://star-isih.onrender.com/api/buildings/rooms?buildingNo=${b.buildingNo}`);
               const availableRooms = roomRes.data.rooms || [];
         
               return {
@@ -123,13 +123,13 @@ const ProfilePage = () => {
 
       if (token) {
         if (isAlreadyFavorite) {
-          await axios.delete('http://localhost:8080/api/users/favorites', {
+          await axios.delete('https://star-isih.onrender.com/api/users/favorites', {
             headers: { Authorization: `Bearer ${token}` },
             data: { building: buildingName },
           });
           updatedFavorites = user.favorites.filter((n) => n !== buildingName);
         } else {
-          await axios.post('http://localhost:8080/api/users/favorites', { building: buildingName }, {
+          await axios.post('https://star-isih.onrender.com/api/users/favorites', { building: buildingName }, {
             headers: { Authorization: `Bearer ${token}` },
           });
           updatedFavorites = [...user.favorites, buildingName];
