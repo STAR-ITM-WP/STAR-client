@@ -14,7 +14,7 @@ const SignupPage = () => {
 
   const [departments, setDepartments] = useState([]);
 
-  // Load department list from JSON
+  // Load department list  from JSON
   useEffect(() => {
     const fetchDepartments = async () => {
       try {
